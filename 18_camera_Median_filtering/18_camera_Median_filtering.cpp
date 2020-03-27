@@ -7,7 +7,7 @@
 using namespace cv;
 using namespace std;
 
-int main()
+int main()  //中值滤波
 {
 	VideoCapture cap(0);
 	double scale = 0.5;
@@ -25,7 +25,7 @@ int main()
 
 		cvtColor(rFrame, hsvMat, COLOR_BGR2HSV);
 
-		medianBlur(rFrame, medianMat, 5);
+		medianBlur(rFrame, medianMat, 5);//中值滤波
 
 		cv::imshow("whie: in the Median filtering", medianMat);
 		cv::imshow("frame", rFrame);
